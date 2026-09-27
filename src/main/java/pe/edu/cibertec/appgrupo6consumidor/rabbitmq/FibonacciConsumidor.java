@@ -22,6 +22,8 @@ public class FibonacciConsumidor {
     public void recibirNumeros(String cadenaNumeros)
             throws InterruptedException {
 
+        log.info("Cadena recibida: " + cadenaNumeros);
+
         Integer[] integerArray = Stream.of(cadenaNumeros.split(";"))
                 .map(String::trim)
                 .map(Integer::parseInt)
